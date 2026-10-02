@@ -8,7 +8,7 @@ window.CONTENT = {
 
   reels: [
   { src: "assets/videos/reel1.mp4", caption: "You Are Really Very important to Me Yarr🥰😊" },
-  { src: "assets/videos/reel2.mp4", caption: "You Me At Hello , What If Uss Din Lab Me Hello Se Starting Na Hoti ??" },
+  { src: "assets/videos/reel2.mp4", caption: "You Had Me At Hello , What If Uss Din Lab Me Hello Se Starting Na Hoti ??" },
   { src: "assets/videos/reel3.mp4", caption: "Miss You So Much..🥹🫶" }
 ],
 
