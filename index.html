@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Parima 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough" x="-5%" y="-3%" width="110%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="16"/></filter></svg>
+
+<section id="intro" class="screen">
+  <img id="gandhi" class="gandhi hidden" src="assets/images/gandhi.jpg" alt="">
+  <p id="introText" class="big"></p>
+  <button id="introBtn" class="btn" type="button"></button>
+</section>
+
+<main id="party" class="hidden">
+  <section id="memories">
+    <h2>Our happy moments 💛</h2>
+    <div id="memList"></div>
+    <h2>Parima, the star ⭐</h2>
+    <div id="soloList" class="solo"></div>
+  </section>
+
+  <section id="cakeSec" class="screen">
+    <h2>Time for the cake! 🎂</h2>
+    <svg id="cake" viewBox="0 0 320 300" role="img" aria-label="Blue star cake with golden candles">
+      <defs>
+        <radialGradient id="swirl" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3C7BA6"/><stop offset=".22" stop-color="#4F8FBA"/><stop offset=".45" stop-color="#EAF4F9"/><stop offset=".7" stop-color="#6BA3C9"/><stop offset=".92" stop-color="#4C8DB8"/><stop offset="1" stop-color="#86B7D6"/></radialGradient>
+        <linearGradient id="side" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A93BC"/><stop offset=".35" stop-color="#A3C9E0"/><stop offset=".7" stop-color="#6AA0C6"/><stop offset="1" stop-color="#4C84AE"/></linearGradient>
+        <radialGradient id="fl" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#FFF6B0"/><stop offset=".5" stop-color="#FFB627"/><stop offset="1" stop-color="#FF6A00"/></radialGradient>
+        <filter id="blur"><feGaussianBlur stdDeviation="4"/></filter>
+        <g id="st" stroke="#FFE27A" stroke-width="1.5" stroke-linecap="round"><path d="M0-5V5M-5 0H5M-3-3L3 3M-3 3L3-3"/></g>
+      </defs>
+      <ellipse cx="160" cy="244" rx="152" ry="50" fill="#F6F7FA"/>
+      <ellipse cx="160" cy="244" rx="152" ry="50" fill="none" stroke="#D9DCE6"/>
+      <ellipse cx="160" cy="236" rx="118" ry="30" fill="#000" opacity=".22" filter="url(#blur)"/>
+      <path d="M45 150V226A115 48 0 0 0 275 226V150Z" fill="url(#side)"/>
+      <g fill="none" stroke="#fff" stroke-linecap="round" opacity=".35"><path d="M62 178q60 16 120 2" stroke-width="12"/><path d="M150 205q70 12 115-6" stroke-width="9"/></g>
+      <use href="#st" x="70" y="190"/><use href="#st" x="250" y="176" transform="scale(.8)" style="transform-origin:250px 176px"/><use href="#st" x="205" y="212"/>
+      <ellipse cx="160" cy="150" rx="115" ry="48" fill="url(#swirl)"/>
+      <ellipse cx="160" cy="150" rx="115" ry="48" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+      <g fill="#fff" font-family="Caveat,cursive" font-size="11" font-weight="700" text-anchor="middle" transform="rotate(14 160 152)"><text id="t1" x="160" y="147"></text><text id="t2" x="160" y="160"></text></g>
+      <use href="#st" x="82" y="140"/><use href="#st" x="236" y="132"/><use href="#st" x="108" y="168"/><use href="#st" x="222" y="166"/><use href="#st" x="160" y="120"/>
+      <g fill="#fff"><circle cx="100" cy="128" r="1.8"/><circle cx="250" cy="150" r="1.8"/><circle cx="140" cy="180" r="1.6"/><circle cx="188" cy="112" r="1.6"/></g>
+      <g id="candles"></g>
+    </svg>
+    <p id="bubble" role="status"></p>
+    <p id="count" aria-live="polite"></p>
+    <button id="cakeBtn" class="btn" type="button">Add the candles 🕯️</button>
+  </section>
+
+  <section id="universe" class="screen hidden">
+    <p class="big" id="uniText"></p>
+  </section>
+
+  <section id="reelSec" class="hidden">
+    <h2>Something for you 🎬</h2>
+    <div id="reelList" class="reels"></div>
+  </section>
+
+  <section id="letterSec" class="hidden">
+    <article class="letter" id="letter"></article>
+  </section>
+</main>
+
+<audio id="bgm" src="assets/music/song.mp3" loop preload="auto"></audio>
+<button id="musicBtn" class="music hidden" type="button" aria-label="Toggle music">🎵</button>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body></html>
